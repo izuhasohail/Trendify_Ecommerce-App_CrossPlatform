@@ -1,0 +1,470 @@
+.signiu-container,
+.signiu-container * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signiu-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background circle */
+.signiu-sliding-circle::before {
+    content: '';
+    position: absolute;
+    background-color: #ff798d;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 11;
+    pointer-events: none;
+}
+
+/* Form */
+
+.signiu-forms-container {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+}
+
+.signiu-form-wrapper {
+    width: 35%;
+    overflow: hidden;
+    padding: 1%;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    transition: 1s 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+.sign-in-wrapper {
+    z-index: 10;
+}
+
+.sign-up-wrapper {
+    opacity: 0;
+    z-index: 9;
+}
+
+.signiu-form-title {
+    text-align: center;
+    font-size: 220%;
+    color: rgb(214, 43, 114);
+    margin-bottom: 8%;
+}
+
+.sign-up-wrapper>.signiu-form-title{
+    margin-bottom: 1%;
+}
+
+.log-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-inputfield {
+    background-color: #f0f0f0;
+    width: 80%;
+    margin: 2% auto;
+    padding: 2%;
+    line-height: 2%;
+    border-radius: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    box-shadow: 2px 2px 6px 1px rgba(145, 135, 145, 0.75);
+
+}
+
+.signiu-input-icon {
+    margin: auto;
+    color: #acacac;
+}
+
+.log-inputfield input {
+    padding: 2%;
+    line-height: 1%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 100%;
+    color: #333;
+}
+
+.log-inputfield input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.signiu-input-focus {
+    border: 0.1rem solid rgb(214, 43, 114);
+    /* box-shadow: 2px 2px 6px 1px rgba(145, 135, 145, 0.75),
+                0px 0px 5px 2px rgb(214, 43, 114) inset; */
+}
+
+.signiu-submit-button {
+    padding: 2% 10%;
+    background: none;
+    font-weight: bold;
+    border: 0.1rem solid rgb(214, 43, 114);
+    color: rgb(214, 43, 114);
+    font-size: large;
+    border-radius: 20rem;
+    margin: 5% auto;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.signiu-submit-button:hover {
+    background: rgb(214, 43, 114);
+    color: white;
+    cursor: pointer;
+
+}
+
+.signiu-admin-check{
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1%;
+    color: rgb(99, 99, 99);
+}
+
+.sign-up-wrapper .signiu-submit-button{
+    margin: 1% auto;
+}
+
+.captcha-mode-btn-containers{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 3%;
+
+}
+
+.captcha-mode-btn-containers>button{
+    margin: 1% 0rem !important;
+    padding: 2% 5% !important;
+}
+/* Panel */
+
+.signiu-panels-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+
+.signiu-panel-left {
+    pointer-events: all;
+}
+
+.signiu-panel-right {
+    pointer-events: none;
+    opacity: 1;
+}
+
+.signiu-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 20;
+    width: 50%;
+}
+
+.signiu-panel-header {
+    width: 90%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    row-gap: 2rem;
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.6s;
+}
+
+.signiu-panel-title {
+    font-size: 200%;
+    margin: 3%;
+}
+
+.signiu-panel-description {
+    text-align: center;
+}
+
+.signiu-panel-button {
+    background-color: rgb(214, 43, 114);
+    color: white;
+}
+
+.signiu-panel-button:hover {
+    background: none;
+    color: rgb(214, 43, 114);
+}
+
+.signiu-panel-img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.signiu-left-img {
+    justify-content: flex-end;
+}
+
+.signiu-right-img {
+    justify-content: flex-start;
+}
+
+.signiu-panel-img {
+    width: 60%;
+    overflow: hidden;
+}
+
+.signiu-panel img {
+    width: 100%;
+}
+
+.signiu-panel-right .signiu-panel-header,
+.signiu-panel-right .signiu-panel-img-wrapper {
+    transform: translateX(800px);
+}
+
+
+/* Animations on sign-up mode*/
+.sign-up-mode .signiu-sliding-circle::before {
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.sign-up-mode .signiu-form-wrapper {
+    left: 25%;
+}
+
+.sign-up-mode .sign-in-wrapper {
+    z-index: 9;
+    opacity: 0;
+}
+
+.sign-up-mode .sign-up-wrapper {
+    opacity: 1;
+    z-index: 10;
+}
+
+.sign-up-mode .signiu-panel-left .signiu-panel-header,
+.sign-up-mode .signiu-panel-left .signiu-panel-img-wrapper {
+    transform: translateX(-800px);
+}
+
+.sign-up-mode .signiu-panel-right .signiu-panel-header,
+.sign-up-mode .signiu-panel-right .signiu-panel-img-wrapper {
+    transform: translateX(0%);
+
+}
+
+.sign-up-mode .signiu-panel-right {
+    pointer-events: all;
+}
+
+.sign-up-mode .signiu-panel-left {
+    pointer-events: none;
+}
+
+@media screen and (max-width:992px) {
+    .signiu-form-wrapper {
+        width: 45%;
+    }
+
+    .signiu-sliding-circle:before {
+        top: -5%;
+        right: 40%;
+    }
+
+    .signiu-panel-header {
+        padding: 5%;
+        padding-top: 8%;
+        row-gap: 2rem;
+    }
+
+    .signiu-panel-img {
+        width: 80%;
+    }
+
+    .sign-up-mode .signiu-sliding-circle::before {
+        transform: translate(100%, -50%);
+        right: 56%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .signiu-sliding-circle::before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+
+    .signiu-panels-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .signiu-panel {
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signiu-panel-header {
+        width: 60%;
+        padding: 2%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        row-gap: 0.5rem;
+    }
+
+    .signiu-panel-title {
+        font-size: 170%;
+    }
+
+    .signiu-panel-description {
+        font-size: 90%;
+    }
+
+    .signiu-panel-img-wrapper {
+        width: 40%;
+    }
+
+    .signiu-panel-left .signiu-panel-img {
+        width: 150%;
+    }
+
+    .signiu-panel-right .signiu-panel-header,
+    .signiu-panel-right .signiu-panel-img-wrapper {
+        transform: translateY(800px);
+    }
+
+
+    .signiu-form-wrapper {
+        width: 60%;
+        top: 65%;
+        left: 50%;
+    }
+
+    /* animation */
+    .sign-up-mode .signiu-sliding-circle::before {
+        transform: translate(-50%, 100%);
+        bottom: 27%;
+        right: initial;
+    }
+
+    .sign-up-mode .signiu-panel-left .signiu-panel-header,
+    .sign-up-mode .signiu-panel-left .signiu-panel-img-wrapper {
+        transform: translateY(-800px);
+    }
+
+    .sign-up-mode .signiu-panel-right .signiu-panel-header,
+    .sign-up-mode .signiu-panel-right .signiu-panel-img-wrapper {
+        transform: translateY(0%);
+
+    }
+
+    .sign-up-mode .signiu-form-wrapper {
+        top: 37%;
+        left: 50%;
+    }
+
+    .signiu-form-title{
+        margin-bottom: 2%;
+    }
+
+    .signiu-submit-button{
+        margin: 2% auto;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .signiu-panel-header {
+        width: 55%;
+        padding: 2% 0% 2% 2%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        row-gap: 0.5rem;
+    }
+
+    .signiu-panel-title {
+        font-size: 150%;
+    }
+
+    .signiu-panel-description {
+        font-size: 80%;
+    }
+
+    .signiu-panel-img-wrapper {
+        width: 45%;
+    }
+
+    .signiu-panel-img-wrapper img {
+        transform: scale(1.1);
+
+    }
+
+    .signiu-form-wrapper {
+        width: 90%;
+    }
+
+    .log-inputfield{
+        padding: 1.2%;
+    }
+
+    
+
+
+}

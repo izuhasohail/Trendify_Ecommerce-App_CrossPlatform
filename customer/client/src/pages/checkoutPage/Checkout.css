@@ -1,0 +1,748 @@
+/* :root {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: white;
+    --select-bg: rgba(255, 255, 255, 0.2);
+} */
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    padding: 15px; /* Padding */
+    text-align: center; /* Text center */
+    z-index: 1; /* Z-index to ensure it's above other elements */
+    cursor: pointer; /* Add cursor pointer */
+  }
+  
+  .custom-alert:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+.checkout-page{
+    margin-top: 76px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif
+} 
+
+.checkout-page input:focus {
+    border-color: #eb109a; /* Change to the desired border color */
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 5px rgba(224, 20, 135, 0.5); /* Optional: Add a box shadow for emphasis */
+}
+
+
+
+
+.ck-left-div{
+    width: 100%;
+    /* background-color: rgb(238, 200, 150); */
+    padding: 2rem;
+    /* height: fit-content; */
+    overflow-y: scroll;
+    background-color: #ffe5d9;
+}
+
+.ck-left-div::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.ck-left-div::-webkit-scrollbar-thumb {
+    background-color: transparent; /* or any color you want */
+}
+.ck-right-div{
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    overflow: hidden;
+    /* height: fit-content; */
+}
+
+
+.ck-left-content{
+    /* background-color: rgb(94, 231, 185); */
+    /* padding: 2rem; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 1rem;
+    /* background-color: rgb(223, 223, 223); */
+    
+}
+
+.ck-right-content{
+    /* background-color: chartreuse; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+
+ .account{
+    /* background-color: rgb(178, 100, 252); */
+    padding: 1rem;
+    padding-bottom: 0;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ck-left-content .account p{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif
+    /* padding: 0.1rem; */
+}
+
+.ck-left-content .account a{
+
+    font-size: 1rem;
+    padding: 0.1rem;
+    padding-top: 1.25rem;
+    text-decoration: none;
+    color: rgb(220, 68, 119);
+
+}
+
+.account:focus{
+    border: none;
+    outline: none;
+}
+
+.account-contact{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.ck-left-content> hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(228, 206, 206);
+    height: 1rem;
+    
+}
+
+
+.email-content{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: 1.5rem;
+}
+
+.email-content> input{
+    width: 20px;
+    height: 17px;
+}
+
+.email-content> p{
+    font-size: 1rem;
+}
+
+
+.delivery-content{
+   
+    /* background-color: chocolate; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dl-country{
+    /* background-color: rgb(255, 255, 127); */
+    padding: 1rem;
+    /* border: 1px solid gray; */
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dl-country > label{
+    position: absolute;
+    top: 18%;
+    left: 6%;
+    font-size: 0.65rem;
+}
+
+.dl-country > select, .dl-country > input{
+    width: 88%;
+    height: 3.5rem;
+    /* background: transparent; */
+    appearance: none;
+    border: 0.1rem solid rgb(227, 221, 221);
+    outline: 0;
+    font: inherit;
+   /* Personalize */
+    padding: 1rem 4rem 1rem 1rem;
+    padding-top: 2rem;
+    /* background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em); */
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(172, 172, 172, 0.07);
+    cursor: pointer;
+    font-size: 1rem;
+    padding-top: 1.01rem;
+    margin-left: .5rem;
+
+    
+}
+
+._city >select, ._city > input{
+    width: 98%;
+    height: 3.5rem;
+    /* background: transparent; */
+    appearance: none;
+    border: 0.1rem solid rgb(227, 221, 221);
+    outline: 0;
+    font: inherit;
+   /* Personalize */
+    padding: 1rem 4rem 1rem 1rem;
+    padding-top: 2rem;
+    /* background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em); */
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(172, 172, 172, 0.07);
+    cursor: pointer;
+    font-size: 1rem;
+    padding-top: 1.01rem;
+    margin-left: .5rem;
+}
+
+.dl-country > select::-ms-expand,.dl-country > input::-ms-expand{
+    display: none;
+
+}
+.dl-country > select:focus,.dl-country > input:focus{
+    border: 1px solid #f46ec3 ;
+    
+        border-color: #eb109a; /* Change to the desired border color */
+        outline: none; /* Remove the default focus outline */
+        box-shadow: 0 0 5px rgba(224, 20, 135, 0.5); /* Optional: Add a box shadow for emphasis */
+    
+}
+
+
+.dl-country > select option{
+    /* color: inherit; */
+    /* background-color: var(--option-bg); */
+
+    /* font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap; */
+}
+
+
+.names-div{
+    padding: 1.5rem;
+    /* background-color: rgb(215, 219, 33); */
+    display: flex;
+     gap: 2.5rem;
+    justify-content: space-between;
+   /* width: 100%; */
+   /* flex-wrap: wrap; */
+   width: 95%;
+}
+
+.first-name, .last-name{
+    position: relative;
+    width: 100%;
+    /* border: 0.1rem solid rgb(227, 221, 221); */
+
+    /* display: flex;
+    flex-direction: column;
+    gap: 1rem;
+     */
+}
+
+.first-name input, .last-name input{
+
+    /* padding: 1rem 4rem 1rem 1rem; */
+
+
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding-left: 1.25rem;
+   width: 93%;
+   /* height: 2rem; */
+   padding-top:1.25rem;
+   cursor: text;
+   
+
+   color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.07);
+    /* cursor: pointer; */
+    font-size: 1.25rem;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    /* background:    0.8em / 1.4em, linear-gradient( var(--arrow-bg) 1em, var(--select-bg) 1.75em); */
+    
+}
+
+.first-name input:focus, .last-name input:focus{
+    border: 1px solid #f46ec3 ;
+    
+        border-color: #eb109a; /* Change to the desired border color */
+        outline: none; /* Remove the default focus outline */
+        box-shadow: 0 0 5px rgba(224, 20, 135, 0.5); /* Optional: Add a box shadow for emphasis */
+    
+    
+}
+
+.address-div{
+    padding: 1.25rem;
+    /* width: 100%; */
+    /* background: wheat; */
+    
+    
+}
+
+
+
+.first-name label, .last-name label{
+     position: absolute;
+     top: 5%;
+     left: 4%;
+     font-size:0.7rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.apartment-div{
+    padding: 1.5rem;
+    /* width: 100%; */
+    /* background-color: aquamarine; */
+}
+
+.apartment-div p{
+    cursor: pointer;
+    font-size:1rem;
+    color: rgb(220, 68, 119);
+}
+
+.save-info{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.save-info> input{
+    width: 20px;
+    height: 17px;
+}
+
+.save-info> p{
+    font-size: 1rem;
+}
+
+.shipping-method{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.shipping-method h3{
+    font-size: 1.25rem;
+}
+
+.shipping{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.07);
+    /* cursor: pointer; */
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    background: 0.8em / 1.4em, linear-gradient( white 1em, white 1.75em);
+}
+
+
+
+.shipping p{
+    font-size: 1rem;
+    
+}
+
+.address-div input, .apartment-div input{
+    padding: 1rem .3rem .6rem .1rem;
+    width: 97%;
+    height: 1.5rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+
+    cursor: text;
+
+    padding-top:1.25rem;
+    padding-left: 1rem;
+    /* background:  no-repeat right 0.8em center / 1.4em, linear-gradient(to left, 3em,  3em); */
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    border: 0.1rem solid rgb(227, 221, 221);
+}
+
+/* .address-div input:-webkit-autofill,
+.apartment-div input:-webkit-autofill {
+    -webkit-background-clip: text;
+} */
+
+.checkout-page input:-webkit-autofill{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #000 !important; /* Set the text color */
+    -webkit-box-shadow: 0 0 0 50px white inset !important; /* Set the background color */
+}
+
+/* .address-div input:-internal-autofill-selected, .apartment-div input:-internal-autofill-selected{
+    background-color: white !important;
+    color: black !important;
+} */
+
+.payment-content{
+    /* background: red; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-content h3, .billing-content h3{
+    font-size: x-large;
+      font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.payment-content p{
+    margin-top: -1rem;
+    font-size: medium;
+}
+
+.payment-options{
+    /* background-color: azure; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+
+.pm-opt1, .pm-opt2,.bill-op-1,.bill-op-2{
+    display: flex;
+    gap: .5rem;
+    /* background-color: aqua; */
+    padding: 1rem;
+    
+}
+
+.pm-opt1 , .pm-opt2{
+    padding: 1rem -1rem .6rem .1rem;
+    width: 100%;
+    height: 1.5rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    margin-top: 1rem;
+
+    cursor: text;
+
+    padding-top:1.25rem;
+    padding-left: 1rem;
+    background: white;
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+}
+
+.bill-op-1,.bill-op-2{
+    padding: 1rem -1rem .6rem .1rem;
+    width: 97%;
+    height: 1.5rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    margin-top: 1rem;
+
+    cursor: text;
+
+    padding-top:1.25rem;
+    padding-left: 1rem;
+    background: white ;
+    color: rgb(3, 0, 0);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+}
+
+
+
+.card-payment-container , .cash-notice{
+    /* background-color: rgb(214, 142, 48); */
+    padding: 1rem;
+    width: 100%;
+    background-color: #ffaeae;
+}
+
+
+ 
+.pm-opt1 input , .pm-opt2 input,.bill-op-1 input,.bill-op-2 input{
+    width: 20px;
+    border: none;
+    background-color: white;
+}
+
+
+.billing-content{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+
+}
+
+
+
+
+.cnfrm-order-btn {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    border-radius: 10rem;
+    color: #fff;
+    font-size: 1rem;
+    /* letter-spacing: 0.15rem; */
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:50%;
+    /* margin-left:9rem; */
+    margin-top: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+.cnfrm-order-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(214, 43, 114);
+    border-radius: 10rem;
+    z-index: -2;
+}
+.cnfrm-order-btn:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.cnfrm-order-btn:hover {
+    color: rgb(233, 72, 139);
+}
+.cnfrm-order-btn:hover:before {
+    width: 100%;
+}
+
+.diff-billing{
+    background-color: #ffaeae;
+    width: 97%;
+}
+
+.product-dt{
+    display: flex;
+    /* background-color: #ffaeae; */
+    /* padding: .1rem; */
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+}
+
+.img-con{
+    display: flex;
+    gap: 1rem;
+}
+
+.p-img{
+    padding: .5rem;
+    /* background-color: rgb(129, 129, 209); */
+    position: relative;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-img span{
+    position: absolute;
+    top: 7%;
+    color: rgb(6, 0, 0);
+    right: 6%;
+    width: 20px;
+    height: 20px;
+    background-color: #f39a9a;
+    border-radius: 1rem;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-dt img{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.p-price{
+    padding: 1rem;
+    /* background-color: #b7b4b4; */
+}
+
+.p-content{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #b7b4b4; */
+    justify-content: center;
+}
+.p-content p{
+    margin-top: -.5rem;
+}
+.p-content span{
+    font-size: .9rem;
+    margin-top: -.8rem;
+    color: rgb(115, 107, 107);
+}
+
+
+.products-in-cart{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 20rem;
+    overflow-y:scroll ;
+}
+
+.products-in-cart::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.products-in-cart::-webkit-scrollbar-thumb {
+    background-color: transparent; /* or any color you want */
+}
+
+.p-total{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-subtotal,.p-shipping,.pp-total{
+    display: flex;
+    justify-content: space-between;
+
+}
+.show-order-summ{
+    display: none;
+}
+
+@media only screen and (max-width:991px){
+    .names-div{
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .checkout-page{
+        
+        
+
+    }
+
+    /* .cnfrm-order-btn{
+        margin-left: 4rem;
+    } */
+}
+
+@media only screen and (max-width:768px){
+    .products-in-cart,.p-total{
+        display: none;
+    }
+    .names-div{
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .checkout-page{
+        margin-top: 76px;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column-reverse;
+    } 
+
+    /* .cnfrm-order-btn{
+        margin-left:12rem;
+    } */
+    .ck-left-div{
+        width: 100%;
+        /* background-color: rgb(238, 200, 150); */
+        padding: 2rem;
+        /* height: fit-content; */
+        overflow-y:none;
+        background-color: #ffe5d9;
+        height: 100%;
+    }
+
+    .ck-right-div{
+        width: 100%;
+        background-color: white;
+        padding: 2rem;
+        /* height: fit-content; */
+        height: 100%;
+    }
+
+    .show-order-summ{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .show-order-summ .p-1{
+        color:#d8538d ;
+    }
+    
+}

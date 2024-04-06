@@ -1,0 +1,31 @@
+/* CancelPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Open+Sans:wght@300;600&family=Poppins:wght@300;500&display=swap');
+
+.cancel-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cancel-content {
+  text-align: center;
+}
+
+.continue-shopping-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(214, 43, 114);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.continue-shopping-btn:hover {
+  background-color: palevioletred;
+}

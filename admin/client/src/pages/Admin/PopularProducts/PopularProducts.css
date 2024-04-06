@@ -1,0 +1,43 @@
+.product-table {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.trending-product-image {
+  margin-left: 1rem;
+}
+
+.product-info {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  width: auto;
+  margin-right: 1rem;
+}
+
+.product-stock {
+  width: auto;
+  margin-right: 1rem;
+}

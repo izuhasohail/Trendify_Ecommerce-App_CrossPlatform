@@ -1,0 +1,66 @@
+.ct-main_div{
+    width: 100%;
+    /* height: 100; */
+    background-color: #ffffff;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    
+
+}
+.ct-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #5f5d5d;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgb(255, 51, 153,.05);
+}
+
+.ct-heading span{
+    color: palevioletred;
+}
+
+.react-multi-carousel-list{
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.react-multi-carousel-list > ul > li{
+     /* width: 100% !important */
+}
+.ct-category-container > div > button{
+    z-index: 1;
+}
+
+.ct-react-multi-carousel-dot-list{
+   bottom: 1% !important;
+   
+} 
+
+.ct-category-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .c-carousel{
+    width: 80%;
+} */
+
+
+@media only screen and (max-width:1024px){
+  
+}
+
+@media only screen and (max-width:900px){
+ 
+
+}
+
+@media only screen and (max-width:600px){
+ 
+}
+@media only screen and (max-width:400px){
+   
+    
+}

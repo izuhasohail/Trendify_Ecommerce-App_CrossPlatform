@@ -1,0 +1,137 @@
+.cc-cards{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 25vw;
+    height: 60vh;
+    /* border: 1px solid brown; */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cc-cards:hover{
+    transform: scale(1.05);
+}
+
+
+.cc-text{
+    position: absolute;
+    top: 50;
+    left: 50; /* Center the text */
+    /* transition: color 0.3s ease-in-out; */
+}
+
+
+
+.cc-text a{
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-family: "poppins";
+
+}
+
+.cc-text a:hover{
+    /* color: #f1e5e5; */
+    color: #040001;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 6px;
+}
+
+
+.cc-card_img{
+    /* border: 1px solid green; */
+   width: 100%;
+   height: 100%;
+}
+.cc-card_img img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width:1024px){
+    .cc-cards{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 80%;
+        height: 90%;
+        /* border: 1px solid brown; */
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+
+
+@media only screen and (max-width:900px){
+    .cc-cards{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 95%;
+        height: 90%;
+        /* border: 1px solid brown; */
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .cc-cards{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 90%;
+        /* border: 1px solid brown; */
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .cc-cards{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid brown; */
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+

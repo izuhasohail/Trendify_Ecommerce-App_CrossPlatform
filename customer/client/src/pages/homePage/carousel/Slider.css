@@ -1,0 +1,430 @@
+.sd-carousel_container,.sd-carousel_container *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+/* .buttons_div{
+    
+    z-index: 100;
+    top:20%;
+    left: 37%;
+    
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 35vw;
+    height: 7vh;
+} */
+.sd-button1 {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 10rem;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+}
+.sd-button1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(214, 43, 114);
+    border-radius: 10rem;
+    z-index: -2;
+}
+.sd-button1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.sd-button1:hover {
+    color: rgb(214, 43, 114);
+}
+.sd-button1:hover:before {
+    width: 100%;
+}
+
+
+
+
+.sd-button2 {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 10rem;
+    color: rgb(214, 43, 114);
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+}
+.sd-button2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10rem;
+    z-index: -2;
+}
+.sd-button2:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color:rgb(214, 43, 114);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.sd-button2:hover {
+    color:#fff;
+}
+.sd-button2:hover:before {
+    width: 100%;
+}
+
+
+
+
+  .sd-buttons_div{
+    
+    z-index: 500;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 3rem;
+}
+
+.sd-buttons_div a{
+   cursor: pointer;
+}
+
+
+.sd-carousel_container{
+  display: flex;
+  /* background-color: aquamarine; */
+  /* background: linear-gradient(to bottom, #ddb892 0%, #f4acb7 100%); */
+  background: linear-gradient(to bottom, #fdd2a7 0%, #ff798d 100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110%;
+  position: relative;
+}
+
+.sd-heading_text{
+  position: absolute;
+  z-index: 50;
+  top: 28%;
+  font-size: 24vw;
+  color: rgb(255, 220, 220);
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sd-carousel{
+ position: relative;
+ height:50%;
+ width: 80%;
+ z-index: 800;
+}
+.sd-carousel > div{
+ position: absolute !important;
+ left: 6% !important;
+ height: 90% !important;
+ width: 94% !important;
+}
+
+.sd-pic{
+ width: 50%;
+}
+
+
+.sd-pic > img{
+ width: 60%;
+ object-fit: cover;
+}
+
+
+.sd-buttons_div{
+
+ z-index: 500;
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ top: 5rem;
+}
+
+/* .button1 {
+ padding: 2rem 5rem;
+ font-size: 1rem;
+}
+
+.button2 {
+ padding: 2rem 5rem;
+ font-size: 1rem;
+} */
+
+
+@media only screen and (max-width: 991px){
+  .sd-carousel_container{
+    display: flex;
+    /* background-color: aquamarine; */
+    /* background: linear-gradient(to bottom, #ddb892 0%, #f4acb7 100%); */
+    background: linear-gradient(to bottom, #fdd2a7 0%, #ff798d 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120%;
+    position: relative;
+  }
+
+  .sd-heading_text{
+    position: absolute;
+    z-index: 50;
+    font-size: 24vw;
+    color: rgb(255, 220, 220);
+    font-weight: bold;
+ }
+
+ .sd-carousel{
+   position: relative;
+   height:50%;
+   width: 80%;
+   z-index: 800;
+ }
+ .sd-carousel > div{
+   position: absolute !important;
+   left: 13% !important;
+   height: 50% !important;
+   width: 80% !important;
+ }
+
+ .sd-pic{
+   width: 50%;
+ }
+
+
+ .sd-pic > img{
+   width: 100%;
+   height:30%;
+   object-fit: cover;
+ }
+
+
+ .sd-buttons_div{
+
+   z-index: 500;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   top: 4rem;
+}
+
+/* .button1 {
+   padding: 2rem 5rem;
+   font-size: 2rem;
+}
+
+.button2 {
+   padding: 2rem 5rem;
+   font-size: 2rem;
+} */
+
+
+
+}
+
+
+
+@media only screen and (max-width: 768px){
+  .sd-carousel_container{
+    display: flex;
+    /* background-color: aquamarine; */
+    /* background: linear-gradient(to bottom, #ddb892 0%, #f4acb7 100%); */
+    background: linear-gradient(to bottom, #fdd2a7 0%, #ff798d 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120%;
+    position: relative;
+  }
+
+  .sd-heading_text{
+    position: absolute;
+    z-index: 50;
+    font-size: 24vw;
+    color: rgb(255, 220, 220);
+    font-weight: bold;
+    top: 35%;
+ }
+
+ .sd-carousel{
+   position: relative;
+   height:50%;
+   width: 80%;
+   z-index: 800;
+ }
+ .sd-carousel > div{
+   position: absolute !important;
+   left: 5% !important;
+   top: 5% !important;
+   height: 70% !important;
+   width: 100% !important;
+ }
+
+ .sd-pic{
+   width: 50%;
+ }
+
+
+ .sd-pic > img{
+   width: 100%;
+   height:30%;
+   object-fit: cover;
+ }
+
+
+ .sd-buttons_div{
+
+   z-index: 500;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   top: 5rem;
+}
+
+/* .button1 {
+   padding: 2rem ;
+   font-size: 1.5rem;
+}
+
+.button2 {
+   padding: 2rem ;
+   font-size: 1.5rem;
+} */
+
+
+
+}
+
+  
+
+  @media only screen and (max-width: 600px) {
+    .sd-carousel_container{
+        display: flex;
+        /* background-color: aquamarine; */
+        /* background: linear-gradient(to bottom, #ddb892 0%, #f4acb7 100%); */
+        background: linear-gradient(to bottom, #fdd2a7 0%, #ff798d 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        position: relative;
+      }
+     
+      .sd-heading_text{
+         position: absolute;
+         z-index: 50;
+         font-size: 24vw;
+         color: rgb(255, 220, 220);
+         font-weight: bold;
+         top: 50%;
+      }
+
+      .sd-carousel{
+        position: relative;
+        height:50%;
+        width: 80%;
+        z-index: 800;
+      }
+      .sd-carousel > div{
+        position: absolute !important;
+        left: 5% !important;
+        top: 25% !important;
+        height: 70% !important;
+        width: 100% !important;
+      }
+
+      .sd-pic{
+        width: 50%;
+      }
+    
+
+      .sd-pic > img{
+        width: 100%;
+        height:30%;
+        object-fit: cover;
+      }
+
+
+      .sd-buttons_div{
+    
+        z-index: 500;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        top: 7rem;
+    }
+
+    /* .button1 {
+        padding: 1.5rem 1.75rem;
+        font-size: 2rem;
+    }
+
+    .button2 {
+        padding: 1.5rem 1.75rem;
+        font-size: 2rem;
+    } */
+
+
+  }
+
+ 

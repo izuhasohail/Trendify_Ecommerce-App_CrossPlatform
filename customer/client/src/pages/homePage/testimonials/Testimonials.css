@@ -1,0 +1,107 @@
+.rv-review{
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.rv-review .rv-box-container{
+    display: flex;
+    gap: 1rem;
+    /* padding-left: 2rem;
+    padding-right: 4rem; */
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.rv-review .rv-box-container .rv-box{
+    
+    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    padding: 2rem 2rem;
+    position: relative;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.rv-review .rv-box-container .rv-box .rv-quote-right{
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: #eee;
+}
+
+.rv-review .rv-box-container .rv-box .rv-stars .rv-star{
+    color: palevioletred;
+    font-size: 2rem;
+} 
+
+.rv-review .rv-box-container .rv-box p{
+    color: #999;
+    font-size: 1.25rem;
+    /* line-height: 1.5; */
+}
+
+
+.rv-review .rv-box-container .rv-box .rv-user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.rv-review .rv-box-container .rv-box .rv-user img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.rv-review .rv-box-container .rv-box .rv-user h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.rv-review .rv-box-container .rv-box .rv-user span{
+    font-size: 1rem;
+    color: #999;
+}
+
+.rv-heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #5f5d5d;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgb(255, 51, 153,.05);
+}
+
+.rv-heading span{
+    color: palevioletred;
+}
+
+/* .c-heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #5f5d5d;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgb(255, 51, 153,.05);
+}
+
+.c-heading span{
+    color: palevioletred;
+} */
+
+
+@media only screen and (max-width: 1200px){
+
+    
+.rv-review .rv-box-container{
+    display: flex;
+    gap: 3rem !important;
+    /* padding-left: 2rem;
+    padding-right: 4rem; */
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    /* width: 100%; */
+}
+}
