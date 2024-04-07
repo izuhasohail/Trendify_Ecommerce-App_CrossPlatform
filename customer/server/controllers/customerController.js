@@ -154,8 +154,10 @@ const sendCaptcha = async (req, res) => {
         },
       });
 
+      console.log("email :  ", email);
+
       const mailOptions = {
-        from: "moeezkhattak86@gmail.com",
+        from: process.env.EMAIL,
         to: email,
         subject: `Trendify Account Verification`,
         text: `Captcha Code: ${message}`,
